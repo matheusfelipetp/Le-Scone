@@ -1,0 +1,42 @@
+body {
+  background: $primary-1;
+  border: 10px solid $primary-2;
+  color: $text;
+
+  @include device(small) {
+    border: none;
+  }
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+p {
+  @include type-1(18);
+}
+
+.title {
+  @include type-1(18);
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+
+  @include device(small) {
+    margin-bottom: 2.5rem;
+  }
+
+  &::after {
+    content: '';
+    display: block;
+    background: $text;
+    width: 75%;
+    height: 2px;
+    margin-left: 20px;
+
+    @include device(medium) {
+      width: 60%;
+    }
+  }
+}

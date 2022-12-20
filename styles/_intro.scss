@@ -1,0 +1,67 @@
+.intro {
+  margin-top: 60px;
+
+  @include device(small) {
+    margin-top: 20px;
+  }
+}
+
+.logo {
+  margin-bottom: 60px;
+}
+
+.intro-info {
+  border-right: 2px solid $text;
+  max-width: 320px;
+
+  p {
+    padding-top: 10px;
+
+    &:first-child {
+      border-bottom: 2px solid $text;
+      padding-bottom: 10px;
+    }
+  }
+}
+
+.intro-tel {
+  color: $primary-3;
+  margin-top: 10px;
+
+  @include device(small) {
+    margin-bottom: 40px;
+  }
+
+  &::after {
+    content: '/ / / /';
+    display: block;
+    margin-top: 200px;
+    font-size: 12.75rem;
+    letter-spacing: -90px;
+    color: $text;
+
+    @include device(medium) {
+      margin-top: 80px;
+      font-size: 10rem;
+      letter-spacing: -80px;
+    }
+
+    @include device(small) {
+      display: none;
+    }
+  }
+}
+
+.open {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  background: $open;
+  border-radius: 50%;
+  margin-left: 15px;
+}
+
+.intro-img {
+  border: 10px solid $primary-2;
+  width: 100%;
+}
